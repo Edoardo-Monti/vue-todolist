@@ -41,6 +41,8 @@ createApp({
         }
     },
     methods: {
-
+        deleteElem(x){
+            this.todos.splice( x, 1 )
+        }
     }
 }).mount("#app")
