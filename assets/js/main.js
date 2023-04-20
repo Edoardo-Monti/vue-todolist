@@ -23,7 +23,9 @@ const {createApp} = Vue
 createApp({
     data() {
         return {
-
+            variabileAdd:{
+                text:''
+            },
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -43,6 +45,9 @@ createApp({
     methods: {
         deleteElem(x){
             this.todos.splice( x, 1 )
+        },
+        addElem(){
+            this.todos.unshift(this.variabileAdd)
         }
     }
 }).mount("#app")

@@ -16,8 +16,9 @@
             <h1>Todo List</h1>
         </div>
         <div class="w-25 mx-auto p-4 d-flex justify-content-between">
-            <input type="text" placeholder="Inserisci le cose da fare">
-            <button class="btn btn-primary">Add</button>
+            <input type="text" placeholder="Inserisci le cose da fare"
+            v-model="variabileAdd.text">
+            <button class="btn btn-primary" @click="addElem">Add</button>
         </div>
         <div v-for="(element, index) in todos"
          class="w-50 mx-auto  p-2 border-bottom d-flex justify-content-between">
