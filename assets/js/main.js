@@ -47,9 +47,13 @@ createApp({
             this.todos.splice( x, 1 )
         },
         addElem(){
+           
             if(this.variabileAdd.text != ''){
                this.todos.unshift(this.variabileAdd) 
             }
+
+            this.variabileAdd = ''
+            
         }
     }
 }).mount("#app")

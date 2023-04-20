@@ -17,7 +17,8 @@
         </div>
         <div class="w-25 mx-auto p-4 d-flex justify-content-between">
             <input type="text" placeholder="Inserisci le cose da fare"
-            v-model="variabileAdd.text">
+            v-model="variabileAdd.text"
+            @KeyUp.enter="addElem">
             <button class="btn btn-primary" @click="addElem">Add</button>
         </div>
         <div v-for="(element, index) in todos"
