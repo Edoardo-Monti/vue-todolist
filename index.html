@@ -30,11 +30,10 @@
             </div>
         </div>
 
-        <div v-if
+        <div v-if="(todos.length == '')"
          class="w-50 mx-auto  p-2 border-bottom d-flex justify-content-between">
             <div>
-                <input class="mr-3" type="checkbox">
-                <span :class="(element.done == true)? 'line' : '' " class="p-3">{{element.text}}</span>
+                <span>Non ci sono elementi nella lista</span>
             </div>
             
         </div>
