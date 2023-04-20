@@ -23,9 +23,8 @@ const {createApp} = Vue
 createApp({
     data() {
         return {
-            variabileAdd:{
-                text:''
-            },
+
+            variabileAdd:"",
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -33,7 +32,7 @@ createApp({
                 },
                 {
                     text: 'Fare la spesa',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Fare il bucato',
@@ -47,13 +46,25 @@ createApp({
             this.todos.splice( x, 1 )
         },
         addElem(){
-           
+           let obj ={
+            text:this.variabileAdd,
+            done:false
+           }
             if(this.variabileAdd.text != ''){
-               this.todos.unshift(this.variabileAdd) 
+               this.todos.unshift(obj) 
             }
 
-            this.variabileAdd = ''
-            
+            this.variabileAdd =""; 
+        },
+        changeInput(index){
+             
+            if(this.todos[index].done == false) {
+                this.todos[index].done = true
+
+            }else{
+                this.todos[index].done = false
+            }
+         
         }
     }
 }).mount("#app")
